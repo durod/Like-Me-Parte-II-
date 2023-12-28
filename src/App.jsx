@@ -23,12 +23,14 @@ function App() {
   };
 
   // este método se utilizará en el siguiente desafío
+  //Así no me funciona para que actualice en vivo los likes.
   /*const like = async (id) => {
     await axios.put(urlBaseServer + `/posts/like/${id}`);
     getPosts();
   };
-*/
+  */
 
+//asi me funciona y actualiza en vivo.
 const like = async (id) => {
   try {
     // Actualizar localmente antes de recibir la respuesta del servidor
@@ -44,6 +46,7 @@ const like = async (id) => {
     console.error("Error al dar like: ", error);
   }
 };
+
 
   // este método se utilizará en el siguiente desafío
   const eliminarPost = async (id) => {
